@@ -5,13 +5,13 @@
  * @param array  $options Component options.
  * @param string $tag     Component tag.
  */
-function custom_oxygen_image_dimensions( $options, $tag ) {
+function custom_oxygen_image_dimensions( $options, $tag = null ) {
 	if ( 'ct_image' !== $tag ) {
 		return;
 	}
 
 	// Setup.
-	$image_type        = isset( $options['image_type'] ) ? $options['image_type'] : 0; // 1 = Image URL, 2 = Media Library attachment.
+	$image_type         = isset( $options['image_type'] ) ? $options['image_type'] : 0; // 1 = Image URL, 2 = Media Library attachment.
 	$width             = null;
 	$height            = null;
 	$auto_empty_width  = false;
